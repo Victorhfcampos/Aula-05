@@ -130,6 +130,63 @@ Atividade 06
 Escreva uma função que receba dois parâmetros, sendo o primeiro um número inteiro e o segundo uma porcentagem,
 depois calcule e retorne o valor do número somado ao aumento percentual informado.
 
+def calculaPercentual(num, perc):
+    total = num*(1+(perc/100))
+    return total
+
+num = int(input("Informe um valor inteiro: "))
+perc = float(input("Informe um percentual de aumento: "))
+
+total = calculaPercentual(num, perc)
+print(f"O total após o aumento foi de {total:.2f}")
+
+Atividade 07
+Crie duas funções, uma que irá SOLICITAR, verificar e retornar qual o maior dentre dois números pares informado,
+outra que fará a mesma coisa para dois números ímpares. Em seguida, some os dois retornos e apresente o valor do resultado.
+
+def verificaPar():
+    par1 = int(input("Informe um número par: "))
+    par2 = int(input("Informe outro número par: "))
+    if par1 >= par2:
+        return par1
+    else:
+        return par2
+
+def verificaImpar():
+    impar1 = int(input("Informe um número impar: "))
+    impar2 = int(input("Informe outro número impar: "))
+    if impar1 >= impar2:
+        return impar1
+    else:
+        return impar2
+par = verificaPar()
+impar = verificaImpar()
+
+print(f"A soma dos maiores números é igual a {par+impar}")
+
+Atividade 08
+Escreva uma função que deve receber seu nome como parâmetro e retornar a mensagem “Boa aula, {seuNome}”.
+Caso por algum engano não seja informado nenhum parâmetro, o retorno deve ser “Boa aula, Fulaninho de Tal”.
+
+Exemplo
+def mensagem(nome, msg = 'Saudações, '):
+    print(f'{msg}{nome}')
+
+nome = input('Qual seu nome? ')
+mensagem(nome)
+
+def saudacao(nome ="Fulaninho de Tal"):
+    print(f"Boa aula, {nome}")
+
+saudacao("Victor")
+
+Atividade 09
+Escreva uma função que recebe como entrada um número inteiro positivo n e retorne a soma de todos os inteiros positivos menores ou iguais a n.
+
+
+
+
+
 
 
 
